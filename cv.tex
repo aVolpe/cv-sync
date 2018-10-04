@@ -1,0 +1,326 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[spanish]{babel}
+\usepackage{color}
+\usepackage{xcolor}
+\hypersetup{%
+    pdftitle={Curriculum Vitae},
+    pdfauthor={Arturo Volpe},
+    pdfsubject={Resumen de vida Profesional},
+    pdfkeywords={},
+    colorlinks=false,       % no link border color
+   allbordercolors=white    % white border color for all
+}
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Arturo }{Volpe}
+{Ingeniero en Informática}
+
+% Fake text to add separator
+\fcolorbox{gray}{gray}{\parbox{\dimexpr\textwidth-40\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+	\section{}~
+    \section{}~
+    \section{}~
+    \section{Celular}
+        +595972105788
+        ~
+    \section{Correo}
+        \href{mailto:arturo@volpe.com.py}{arturo@volpe.com.py}
+        \href{mailto:arturovolpe@gmail.com}{arturovolpe@gmail.com}
+        ~
+    \section{Repositorios}
+        \href{https://github.com/avolpe}{github.com/avolpe}
+        \href{https://gitlab.com/avolpe}{gitlab.com/avolpe}
+        ~
+    \section{Blog}
+        \href{https://www.volpe.com.py}{volpe.com.py}
+        ~
+\section{Idiomas}
+\textbf{Español}\includegraphics[scale=0.40]{img/5stars.png}
+\textbf{Inglés}\includegraphics[scale=0.40]{img/3stars.png}
+\end{aside}
+
+
+\section{Experiencia}
+\begin{entrylist}
+\entry
+    {2017 - 2018}
+    {Codium S.A.}
+    {}
+    { \proyecto
+        {Bancard S.A.}
+        {}
+        {}
+        {Consultor}
+        {Soporte para implementación de un esquema de integración continua para los proyectos satélite
+    de Bancard, lo que incluye sistemas desarrollados sobre Ruby on Rails, y Spring.  Se utilizó Jenkins 
+    para el manejo de tareas, geminabox y artifactory para la gestión de librerías,
+    SonarQube para análisis estático y Gitlab como repositorio de código fuente.} 
+        {170}
+    }
+    {}
+\entry
+    {2015-2017}
+    {\href{http://www.cds.com.py}{Centro de Desarrollo Sostenible S.A.}}
+    {}
+    {\proyecto
+        {Financiera el Comercio}
+        {2016-2017}
+        {}
+        {Arquitecto de Software}
+        {
+        \textbf{Arquitectura y mantenimiento} de sistemas satélite de la Financiera, incluyendo BancaWeb, aplicaciones móviles, sistemas de gestión internos e integración con sistemas Externos. Encargado de proceso de 
+        \textbf{Integración continua} a través de la automatización del proceso de construcción de todos los sistemas y automatización de pruebas de integración y e2e. En el área de \textbf{producción}, automatización del proceso de monitoreo de sistemas y generación de alertas.
+        } 
+        {976}
+    
+    \proyecto
+        {\href{https://www.mytappweb.com}{myTapp}}
+        {2016-2017}
+        {Plataforma para gestión de comercios y pedidos con integración a plataformas de pago.}
+        {Arquitecto y full stack}
+        {
+        Desarrollo de aplicación móvil implementada con  \textbf{ionic (v1)}, 
+        backend utilizando el stack JavaEE~(jax-rs, JPA, EJB) y una base de datos
+        PostgreSQL.  Además, implementé un esquema de \textit{CD} para este proyecto,
+        utilizando \textit{Jenkins, Rancher, Docker, Arquillian, SonarQUBE, AWS y Scaleway}.  
+        En producción se utilizaron  otros sistemas complementarios de código abierto 
+        como son: \textit{PictShare, pictfit} para la gestión de imágenes, redis para una
+        caché de alto rendimiento y nginx como proxy reverso.  El sistema en producción 
+        funciona sobre AWS (RDS, y instancias EC2 manejadas a 
+        través de un Rancher). Además incluye un sistema de monitoreo del sistema
+        utilizando \textit{Graphite y Dropwizard}.
+        } 
+        {}
+        
+    \proyecto
+        {\href{http://www.cds.com.py/productos/kinematics/}{Kinematic}}
+        {2016-2017}
+        {Plataforma automatizada de entrenamiento de tiro de balón}
+        {Arquitecto y full stack}
+        {Consta de dos componentes principales, un \textbf{core} de detección de movimiento de pelotas en movimiento desarrollado en python y c++ utilizando OpenCV. Así mismo, un componente de \textbf{front-end}, el cual se encuentra desarrollado con python utilizando django.}
+        {300}
+        
+        
+        
+      }
+      {}
+   
+  \entry
+    {2015-2017}
+    {\href{http://www.cds.com.py}{Centro de Desarrollo Sostenible S.A.}}
+    {}
+    {
+    \proyecto
+        {\href{https://mawio.net/}{MAWIO}}
+        {2016-2017}
+        {Mapa Web Interactivo de Obras de la Essap}
+        {Arquitecto y full stack}
+        {SPA desarrollada utilizando principalmente en el front-end \textbf{angular, leaflet y jQuery datatables}, en el back-end \textbf{Jaxa EE (jax-rs, JPA y EJB),}, una base de datos \textbf{PostgreSQL con PostGIS}, y manejo del entorno de desarrollo y producción utilizando \textbf{docker, nginx, wildfly 9 y redis}}
+        {300}
+        
+    \proyecto
+        {\href{http://www.cds.com.py/productos/sistemas-de-gestion/sistema-de-gestion-hospitalaria/}{Sistema de Gestión Hospitalaria}}
+        {2015-2017}
+        {Sistema integral para hospitales}
+        {Arquitecto y líder de proyecto}
+        {SPA desarrollada utilizando principalmente en el front-end 
+        \textbf{angular, boostrap-ui y jQuery datatables}, en el back-end 
+        \textbf{Jaxa EE (jax-rs, JPA y EJB)}, una base de datos PostgreSQL, 
+        y manejo del entorno de desarrollo y producción utilizando 
+        \textbf{docker, nginx, wildfly 9 y redis}}
+        {1920}
+        
+    \proyecto
+        {Portal de datos abiertos para el Poder Judicial}
+        {2015}
+        {Portal de datos abiertos que incluye varias fuentes de datos.}
+        {full stack}
+        {Portal de datos abiertos desarrollado como una SPA utilizando 
+        \textbf{angular, boostrap-ui y jQuery datatables}, en el back end 
+        se utilizó el stack estándar de Java EE (jax-rs, JPA, EJB), como base 
+        de datos se utilizó Microsoft SQL Server 2008.}
+        {352} 
+        
+    \proyecto
+        {\href{http://bacheando.com/}{Bacheando}}
+        {2015}
+        {Proyecto de localización de incidentes urbanos}
+        {full stack}
+        {Permite la geolocalización de baches, pérdidas, hundimientos y
+            cortes de la municipalidad de Asunción.
+            Posee un componente web (desarrollado utilizando 
+            \textbf{angular, d3, boostrap y leaflet}), así como una 
+            aplicación móvil para dispositivos Android y un servidor desarrollado 
+            utilizando wildfly y Java EE(jax-rs, JPA).}
+        {176} 
+        
+	}
+    {}
+
+
+\entry
+    {2012 - 2015}
+    {Facultad Politécnica}
+    {Arquitecto de Software}
+    {Ingrese como programador junior, desempeñando cargos como la creación de
+        aplicaciones base para el desarrollo, tareas de diseño de interfaces
+        como de lógica de negocio, integración de componentes, e investigación
+        de tecnologías.
+
+        Proyectos:
+        \begin{itemize}
+            \item Sistema Integral de Gestión Hospitalaria (Hospital de
+                Clínicas)
+            \item Sistema de Gestión Convergente de Nueva Generación (Copaco)
+        \end{itemize}}
+    {5280}
+\entry
+    {2011 - 2012}
+    {Konecta S.A.}
+    {Programador Junior}
+    {Como programador junior, mis responsabilidades incluían el diseño y
+        desarrollo de software para dispositivos móviles, y la creación de
+        servicios webs, tanto servicios que interactuaban directamente con
+        aplicaciones móviles, como otros que interactuaban con portales web
+        \\}
+    {1408}
+\entry
+    {2011 - 2011}
+    {Global S.A.}
+    {Programador Junior}
+    {Como programador junior mis funciones iban desde correcciones y pruebas de
+        aplicaciones en fase final de desarrollo, hasta realizar funciones
+        relacionadas con el mantenimiento de la base de datos y su correcto
+        funcionamiento. Además de administración de servidores. \\}
+    {300}
+\entry
+    {2010 - 2011}
+    {Bunker Games}
+    {Programador}
+    {Como programador principal y único, mis responsabilidades iban desde la
+        correcto funcionamiento del videojuego, la integración del entorno
+        gráfico, programación de la inteligencia artificial, cálculo de
+        recorridos, optimización, etc. \\}
+    {1408}
+
+\end{entrylist}
+
+\section{Freelancer}
+\proyectof
+    {2018}
+    {\href{https://www.pemoi.com.py}{Pemoi}}
+    {\href{https://www.pemoi.com.py/}{Yo Dono}}
+    {Plataforma de Crowfounding para campañas políticas.}
+    {Consiste en una aplicación multiplataforma~(Andorid e iOS) desarrollada utilizando
+     Ionic 3, servicios de firebase (social login, realtime database, deep links, functions, 
+     storage, etc), fabric.io (beta, crashlytics, fastlane, etc).
+     
+     Incluye un sistema de pagos digitales utilizando la plataformas de
+     Tigo Money, Bancard S.A. y \href{https://www.pagopar.com.py}{Pagopar}.
+     
+     }
+    {300}
+\proyectof
+    {2018}
+    {\href{http://github.com/avolpe/cotizacion}{Cotizaciones de monedas en el Paraguay}}
+    {\href{https://cotizaciones.volpe.com.py}{Link}}
+    {Herramienta para encontrar la mejor cotización para varias monedas,
+    utiliza información de varias casas de cambio.}
+    {Desarrollado con Vue y Java (SpringBoot), completamente OpenSource}
+    {300}
+\proyectof
+    {2017}
+    {\href{http://github.com/avolpe/set-ruc-finder}{Indice de contribuyentes del Paraguay}}
+    {\href{https://set.volpe.com.py}{Link}}
+    {Herramienta para buscar RUCs válidos en el Paraguay, también provee algoritmos
+    para validaciones y acceso a la base completa de contribuyentes del Paraguay}
+    {Desarrollado con React y NodeJS (express), completamente OpenSource}
+    {300}
+\proyectof
+    {2015}
+    {\href{https://apps.facebook.com/pechugon_pepe}{PepeChugon Game}}
+    {\href{http://www.animata.com.py/}{Animata}}
+    {Consiste en un juego multiplataforma~(Android, Facebook Canvas y Windows)
+        y un servidor donde se almacena la información y el rendimiento de los
+        usuarios. El juego fue desarrollado para la campaña publicitaria del día
+        del niño.}
+    {El Juego fue desarrollado utilizando Unity3D y un componente de backend 
+    desarrollado utilizando OpenShift con PostgreSQL.}
+    {300}
+        
+
+\section{Experiencia académica}
+
+\clase
+    {2016}
+    {Curso de Verano}
+    {\href{http://www.pol.una.py/cursosverano/index.php?option=com_content&view=article&layout=edit&id=91}{Innovación
+            social y transparencia mediante datos abiertos}} 
+    {Auxiliar}
+    {FP-UNA}
+    {El curso busca crear una comunidad de personas que puedan aportar ideas
+        innovativas con alto impacto social y que fomenten la transparencia en
+        el uso de los recursos públicos. }
+\clase
+    {2016}
+    {Licenciatura en ciencias Informáticas}
+    {Algoritmos I y II} 
+    {Auxiliar de enseñanza}
+    {FP-UNA}
+    {Introducción a algoritmos, conceptos básicos y programación con SLE2 y C.}
+
+\clase
+    {2016}
+    {Ingeniería en informática}
+    {Gestión de Centro de Cómputos} 
+    {Auxiliar de enseñanza}
+    {FP-UNA}
+    {}
+
+\newpage
+\section{Educación}
+\begin{entrylist}
+  \educacion
+    {2008 - 2015}
+    {Ingeniero en Informática}
+    {Facultad Politécnica - Universidad Nacional de Asunción}
+    {\textbf{Tesis de grado:} Juegos serios como apoyo a la formación de profesionales: Una aplicación al área de enfermería}
+  \educacion
+    {2005 - 2007}
+    {Bachiller Técnico en Informática}
+    {Colegio de San José}
+    {}
+\end{entrylist}
+
+\begin{absolutelynopagebreak}
+\section{Referencias}
+\begin{entrylist}
+    \educacion{M.Sc.}{Martin Abente}{}{}
+    %\educacion{M.Sc.}{Guillermo Gonzalez}{}{}
+    \educacion{M.Sc.}{Maria Elena Garcia}{}{}
+    \educacion{Ph.D.}{Juan Pane}{}{}
+\end{entrylist}
+\end{absolutelynopagebreak}
+
+\begin{flushleft}
+    \emph{\today{}}
+\end{flushleft}
+\begin{flushright}
+    \emph{Arturo Volpe}
+\end{flushright}
+
+
+
+\end{document}
